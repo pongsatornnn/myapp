@@ -52,6 +52,13 @@
 				table.style.display = 'none';  // ซ่อนตาราง
 			}
 		}
+		function calAvg() {
+			let n1 = Number.parseInt(document.getElementById('num1').value);
+			let n2 = Number.parseInt(document.getElementById('num2').value);
+			let n3 = Number.parseInt(document.getElementById('num3').value);
+			let r = (n1 + n2 + n3) / 3;
+			document.getElementById('result').innerHTML = "ค่าเฉลี่ย: " + r;
+		}
 
 	</script>
 
