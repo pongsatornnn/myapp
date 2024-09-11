@@ -1,5 +1,5 @@
 {% extends "_base.html" %}
-
+{% load static %}
 {% block title %}Home{% endblock %}
 
 {% block content %}
@@ -83,16 +83,50 @@
 <div class="flex flex-col mt-4 items-center ">
 	<h1 id="head" class="text-center text-2xl font-prompt ">สวัสดีชาวโลก</h1>
 	<button class="py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white rounded-full mt-4 font-prompt" onclick="document.getElementById('head').style.color='red'">change color</button>
-	<div id='currentDateTime' class="mt-4 text-2xl font-prompt"></div>
+	<div id='currentDateTime' class="mt-4 text-2xl font-prompt">
 		<script>updateTime();</script>
+	</div>
 	<div class="mt-4 flex flex-row items-center">
-		<button class="py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white rounded-full font-prompt">cat stand</button>
-		<img src="imges/Idle.png" width="200px">
-		<button class="py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white rounded-full font-prompt">cat slide</button>
+		<button class="py-10 px-4  border border-blue-500 hover:bg-blue-700 text-blue-500  font-prompt"
+		onclick="document.getElementById('ChangeImg').src='{% static 'imges/Idle.png' %}'">cat stand</button>
+		
+		<img id="ChangeImg" src="{% static 'imges/Idle.png' %}" width="200px">
+		
+		<button class="py-10 px-4  hover:bg-blue-700 border border-blue-500 text-blue-500  font-prompt"
+		onclick="document.getElementById('ChangeImg').src='{% static 'imges/Slide.png' %}'">cat slide</button>
+	</div>
+	<div class="mt-4 flex flex-row items-center">
+		<button class="py-2 px-4 bg-blue-500  hover:bg-blue-700 text-white mr-4 font-prompt"
+		onclick="displayTable('visible')">show table</button>		
+		<button class="py-2 px-4 bg-blue-500 hover:bg-blue-700  text-white  font-prompt"
+		onclick="displayTable('hidden')">hide table</button>
+	</div>
+	<div class="mt-2 text-center">
+		<table id="SHtable" class="table-auto border-2 ">
+			<caption>ตารางสินค้า</caption>
+			<tr class="border-2">
+				<th class="border-2">รายการที่ 1</th>
+				<th class="border-2">รายการที่ 2</th>
+				<th class="border-2">รายการที่ 3</th>
+			</tr>
+			<tr class="border-2">
+				<td class="border-2">123</td>
+				<td class="border-2">456</td>
+				<td class="border-2">789</td>
+			</tr>
+			<tr class="border-2">
+				<td class="border-2">101</td>
+				<td class="border-2">112</td>
+				<td class="border-2">132</td>
+			</tr>
+			<tr class="border-2">
+				<td class="border-2">655</td>
+				<td class="border-2">764</td>
+				<td class="border-2">345</td>
+			</tr>
+		</table>
 	</div>
 </div>	
-</div>
 
-</div>
 
 {% endblock content %}

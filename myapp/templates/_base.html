@@ -43,6 +43,16 @@
 			let now = THdateTime(new Date());
 			document.getElementById('currentDateTime').innerHTML = now;
 		}
+		function displayTable(state) {
+			var table = document.getElementById('SHtable');
+			
+			if (state === 'visible') {
+				table.style.display = 'table'; // แสดงตาราง
+			} else if (state === 'hidden') {
+				table.style.display = 'none';  // ซ่อนตาราง
+			}
+		}
+
 	</script>
 
 </head>
