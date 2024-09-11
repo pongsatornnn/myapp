@@ -74,18 +74,25 @@
 <div class="flex gap-2 mt-4 justify-between">
     <div class="p-4 text-white bg-red-500">1</div>
     <div class="p-4 text-white bg-red-500">2</div>
-    <div class="p-4 text-white bg-red-500">3</div>
-    <div class="p-4 text-white bg-red-500">4</div>
-    <div class="p-4 text-white bg-red-500">5</div>
-    <div class="p-4 text-white bg-red-500">6</div>
+    <div class="p-4 text-white bg-yellow-500">3</div>
+    <div class="p-4 text-white bg-green-500">4</div>
+    <div class="p-4 text-white bg-blue-500">5</div>
+    <div class="p-4 text-white bg-purple-500">6</div>
 </div>
 
-<div class="flex flex-col mt-4 items-center">
+<div class="flex flex-col mt-4 items-center ">
 	<h1 id="head" class="text-center text-2xl font-prompt ">สวัสดีชาวโลก</h1>
 	<button class="py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white rounded-full mt-4 font-prompt" onclick="document.getElementById('head').style.color='red'">change color</button>
 	<div id='currentDateTime' class="mt-4 text-2xl font-prompt"></div>
 		<script>updateTime();</script>
+	<div class="mt-4 flex flex-row items-center">
+		<button class="py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white rounded-full font-prompt">cat stand</button>
+		<img src="imges/Idle.png" width="200px">
+		<button class="py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white rounded-full font-prompt">cat slide</button>
 	</div>
+</div>	
+</div>
+
 </div>
 
 {% endblock content %}
